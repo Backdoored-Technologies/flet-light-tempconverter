@@ -188,6 +188,43 @@ def main(page: ft.Page):
             ),
             ft.Divider(height=5),
             
+            ft.Container(
+                content=ft.Row([
+                    ft.Column(
+                        ft.Text("Unit Conversion Formulas Below:", weight=ft.FontWeight.BOLD, size=16),
+                    ),
+                    ft.Column([
+                        ft.Text("Unit Conversion Formulas Below:", weight=ft.FontWeight.BOLD, size=16),
+                        ft.Text("Celsius (°C) to X", weight=ft.FontWeight.BOLD, size = 14),
+                        ft.Text("- Celsius (°C) to Fahrenheit (°F)   =>   °F = °C × 9/5 + 32"),
+                        ft.Text("- Celsius (°C) to Kelvin (K)       =>   K = °C + 273.15"),
+                        ft.Text("- Celsius (°C) to Rankine (°R)       =>   °R = °C × 9/5 + 491.67"),
+                    ]),
+                    ft.Column([
+                        ft.Text("Fahrenheit (°F) to X", weight=ft.FontWeight.BOLD, size = 14),
+                        ft.Text("- Fahrenheit (°F) to Celsius (°C)    =>   °C = (°F − 32) × 5/9"),
+                        ft.Text("- Fahrenheit (°F) to Kelvin (K)     =>   K = (°F + 459.67) × 5/9"),
+                        ft.Text("- Fahrenheit (°F) to Rankine (°R)       =>   °R = °F + 459.67"),
+                    ]),
+                        ft.Column([
+                        ft.Text("Kelvin (K) to X", weight=ft.FontWeight.BOLD, size = 14),
+                        ft.Text("- Kelvin (K) to Celsius (°C)        =>   °C = K − 273.15"),
+                        ft.Text("- Kelvin (K) to Fahrenheit (°F)     =>   °F = K × 9/5 − 459.67"),
+                        ft.Text("- Kelvin (K) to Rankine (°R)       =>   °R = K × 9/5"),
+                    ]),
+                    ft.Column([
+                        ft.Text("Rankine (°R) to X", weight=ft.FontWeight.BOLD, size = 14),
+                        ft.Text("- Rankine (°R) to Celsius (°C)        =>   °C = K − 273.15"),
+                        ft.Text("- Rankine (°R) to Fahrenheit (°F)     =>   °F = K × 9/5 − 459.67"),
+                        ft.Text("- Rankine (°R) to Kelvin (K)       =>   K = °R × 5/9"),
+                    ]),
+                ])
+            ),
+
+            ft.Divider(height=0),
+
+            # ft.Divider(height=300),
+
             c_input,
             ft.Divider(height=10),
             f_input,
@@ -195,6 +232,14 @@ def main(page: ft.Page):
             k_input,
             ft.Divider(height=10),
             r_input,
+            ft.Divider(height=10),
+
+
+            ft.Divider(height=10),
+            c_output,
+            f_output,
+            k_output,
+            r_output,
             ft.Divider(height=10),
 
             ft.Button(
@@ -207,47 +252,8 @@ def main(page: ft.Page):
                 on_click=clear_all,
             ),
 
-            ft.Divider(height=10),
-            c_output,
-            f_output,
-            k_output,
-            r_output,
-            ft.Divider(height=10),
-
-            #div
-            ft.Container(
-                content=ft.Column([
-                    ft.Text("Unit Conversion Formulas Below:", weight=ft.FontWeight.BOLD, size=16),
-                    ft.Text(" - Celsius (°C) to X", weight=ft.FontWeight.BOLD, size = 14),
-                    ft.Text(" - Celsius (°C) to Fahrenheit (°F)   =>   °F = °C × 9/5 + 32"),
-                    ft.Text(" - Celsius (°C) to Kelvin (K)       =>   K = °C + 273.15"),
-                    ft.Text(" - Celsius (°C) to Rankine (°R)       =>   °R = °C × 9/5 + 491.67"),
-                    ft.Divider(height=5),
-                    ft.Text(" - Fahrenheit (°F) to X", weight=ft.FontWeight.BOLD, size = 14),
-                    ft.Text(" - Fahrenheit (°F) to Celsius (°C)    =>   °C = (°F − 32) × 5/9"),
-                    ft.Text(" - Fahrenheit (°F) to Kelvin (K)     =>   K = (°F + 459.67) × 5/9"),
-                    ft.Text(" - Fahrenheit (°F) to Rankine (°R)       =>   °R = °F + 459.67"),
-                    ft.Divider(height=5),
-                    ft.Text(" - Kelvin (K) to X", weight=ft.FontWeight.BOLD, size = 14),
-                    ft.Text(" - Kelvin (K) to Celsius (°C)        =>   °C = K − 273.15"),
-                    ft.Text(" - Kelvin (K) to Fahrenheit (°F)     =>   °F = K × 9/5 − 459.67"),
-                    ft.Text(" - Kelvin (K) to Rankine (°R)       =>   °R = K × 9/5"),
-                    ft.Divider(height=5),
-                    ft.Text(" - Rankine (°R) to X", weight=ft.FontWeight.BOLD, size = 14),
-                    ft.Text(" - Rankine (°R) to Celsius (°C)        =>   °C = K − 273.15"),
-                    ft.Text(" - Rankine (°R) to Fahrenheit (°F)     =>   °F = K × 9/5 − 459.67"),
-                    ft.Text(" - Rankine (°R) to Kelvin (K)       =>   K = °R × 5/9"),
-                    ft.Divider(height=5),
-                ])
-            ),
-            
-            # can use column or container, have to specify content= with container
-
         ])
     )
 
 if __name__ == "__main__":
     ft.run(main)
-
-    # put input fields and output fields at the bottom
-    # code logic
